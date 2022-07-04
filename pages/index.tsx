@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import {
@@ -11,11 +10,16 @@ import {
   Grid,
   GridItem,
   Flex,
+  Stack,
+  HStack,
+  VStack,
+  Image,
 } from "@chakra-ui/react";
 const Home: NextPage = () => {
   return (
     <Grid
       h="200px"
+      width="80%"
       templateRows="repeat(2, 1fr)"
       templateColumns="repeat(2, 1fr)"
       gap={4}
@@ -62,12 +66,28 @@ const Home: NextPage = () => {
               Voluptatibus dicta praesentium?
             </Text>
           </Box>
-          <Box>
-            <Text>REMES</Text>
-            <Text>POP</Text>
-            <Text>ARGY</Text>
+          <Box
+            textTransform="uppercase"
+            fontWeight={700}
+            fontSize="xl"
+            css={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+          >
+            <Text fontSize="lg">Remes</Text>
+            <Text>Pop</Text>
+            <Text>Argy</Text>
           </Box>
         </Flex>
+        <Box position="relative">
+          <Image alt="imagen" src="./images/diego.png" />
+          <Box
+            width="120%"
+            height={200}
+            bg="#FF0000"
+            opacity={0.9}
+            position="absolute"
+            top="30%"
+          />
+        </Box>
       </GridItem>
     </Grid>
   );
