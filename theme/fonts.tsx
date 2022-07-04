@@ -19,6 +19,12 @@ const Fonts = () => (
         font-display: swap;
         src: url('../fonts/ArticulatCF-Normal.ttf') format('ttf')
     }
+    @font-face {
+        font-family: 'Articulat CF';
+        font-weight: 900;
+        font-style: heavy;
+        src: url('../fonts/ArticulatCF-Heavy.ttf') format('ttf')
+    }
       `}
   />
 );
