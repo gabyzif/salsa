@@ -21,28 +21,34 @@ const Hero = (props) => {
       h="100vh"
       width="80%"
       templateRows="repeat(2, 1fr)"
-      templateColumns="repeat(2, 1fr)"
+      templateColumns="1fr 2fr"
       gap={4}
     >
       <GridItem>
-        <Box>
-          <Heading as="h1" size="4xl" textTransform="uppercase">
+        <Flex direction="column" align="flex-end">
+          <Heading as="h1" size="5xl" textTransform="uppercase" lineHeight={1}>
             Salsa
           </Heading>
           <Heading
-            as="h1"
-            size="4xl"
+            as="h2"
+            lineHeight={1}
+            size="5xl"
             textTransform="uppercase"
             className="outlined-text"
           >
             Arg
           </Heading>
-        </Box>
+        </Flex>
       </GridItem>
       <GridItem>
-        <Flex>
+        <Flex gap={3}>
           <Box>
-            <Heading as="p" textTransform="uppercase" className="outlined-text">
+            <Heading
+              as="p"
+              size="lg"
+              textTransform="uppercase"
+              className="outlined-text"
+            >
               Salsa
             </Heading>
             <Text textTransform="uppercase" fontSize="xs">
@@ -87,9 +93,9 @@ const Hero = (props) => {
             width="120%"
             height={200}
             bg="#FF0000"
-            opacity={0.9}
             position="absolute"
             top="30%"
+            css={{ mixBlendMode: "multiply" }}
           />
         </Box>
       </GridItem>
