@@ -14,16 +14,12 @@ const Fonts = () => (
       /* latin */
       @font-face {
         font-family: 'Articulat CF';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('../fonts/ArticulatCF-Normal.ttf') format('ttf')
+        src: url('../fonts/ArticulatCF-Normal.ttf') format('ttf'), 
     }
     @font-face {
         font-family: 'Articulat CF';
+        src: url('../fonts/ArticulatCF-Heavy.ttf') format('ttf'), 
         font-weight: 900;
-        font-style: heavy;
-        src: url('../fonts/ArticulatCF-Heavy.ttf') format('ttf')
     }
       `}
   />

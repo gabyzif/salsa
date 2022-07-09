@@ -13,10 +13,12 @@ const overrides = {
 
   fonts: {
     heading: `'Druk Wide', sans-serif`,
-    body: `'Articulat CF', sans-serif`,
+    body: `'Articulat CF', 'caca', sans-serif`,
   },
   fontSizes: {
     "5xl": "5rem",
+    "1xl": "1.35rem",
+    xxs: "0.5rem",
   },
   components: {
     Heading: {

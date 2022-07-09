@@ -19,7 +19,7 @@ import {
 import Hero from "~/components/ui/hero/Hero";
 const Home: NextPage = () => {
   return (
-    <Container maxW={"7xl"}>
+    <Container maxW={"8xl"}>
       <Hero />
     </Container>
   );

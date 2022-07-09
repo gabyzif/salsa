@@ -17,15 +17,14 @@ import {
 
 const Hero = (props) => {
   return (
-    <Grid
-      h="100vh"
-      width="80%"
-      templateRows="repeat(2, 1fr)"
-      templateColumns="1fr 2fr"
-      gap={4}
-    >
+    <Grid h="100vh" templateColumns="1fr 2fr">
       <GridItem>
-        <Flex direction="column" align="flex-end">
+        <Flex
+          direction="column"
+          align="flex-end"
+          h={250}
+          justifyContent="flex-end"
+        >
           <Heading as="h1" size="5xl" textTransform="uppercase" lineHeight={1}>
             Salsa
           </Heading>
@@ -41,45 +40,49 @@ const Hero = (props) => {
         </Flex>
       </GridItem>
       <GridItem>
-        <Flex gap={3}>
-          <Box>
+        <Flex gap={3} w="80%" marginLeft="auto">
+          <Box w="30%">
             <Heading
               as="p"
-              size="lg"
+              size="md"
+              letterSpacing={3}
               textTransform="uppercase"
               className="outlined-text"
             >
               Salsa
             </Heading>
-            <Text textTransform="uppercase" fontSize="xs">
+            <Text textTransform="uppercase" fontSize="xxs">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus dicta praesentium?
             </Text>
           </Box>
-          <Box>
-            <Text textTransform="uppercase" fontSize="xs">
+          <Box w="30%">
+            <Text textTransform="uppercase" fontSize="xxs">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatibus dicta praesentium?
             </Text>
           </Box>
           <Box
             textTransform="uppercase"
-            fontWeight={700}
-            fontSize="xl"
+            fontWeight={500}
+            fontSize="1xl"
+            lineHeight={1}
+            marginLeft="auto"
+            borderLeft="2px solid black"
             css={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
-            <Text fontSize="lg">Remes</Text>
+            <Text>Remes</Text>
             <Text>Pop</Text>
-            <Text>Argy</Text>
+            <Text lineHeight={1.5}>Argentina</Text>
           </Box>
         </Flex>
       </GridItem>
-      <GridItem>
+      <GridItem alignSelf="center">
         <Box>
           <Text
-            fontSize="6xl"
+            fontSize="5xl"
             as="p"
-            fontWeight="900"
+            fontWeight={900}
             css={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
             #10
@@ -87,14 +90,20 @@ const Hero = (props) => {
         </Box>
       </GridItem>
       <GridItem>
-        <Box position="relative">
-          <Image alt="imagen" src="./images/diego.png" />
+        <Box position="relative" bottom="131.5px">
+          <Image
+            alt="imagen"
+            w="90%"
+            src="./images/diego.png"
+            marginLeft="auto"
+          />
           <Box
             width="120%"
-            height={200}
+            height={350}
+            left="-3%"
             bg="#FF0000"
             position="absolute"
-            top="30%"
+            top="25%"
             css={{ mixBlendMode: "multiply" }}
           />
         </Box>
