@@ -18,12 +18,14 @@ import {
 
 import Hero from "~/components/ui/hero/Hero";
 import Nav from "~/components/ui/nav/NavBar";
+import Messy from "~/components/ui/galleries/Messy";
 
 const Home: NextPage = () => {
   return (
     <Container maxW={"8xl"}>
       <Nav />
       <Hero />
+      <Messy />
     </Container>
   );
 };

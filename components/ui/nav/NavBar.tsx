@@ -61,7 +61,7 @@ export const NavBar = () => {
             </ButtonGroup>
           </HStack>
           <IconButton
-            size="sm"
+            size="lg"
             variant="ghost"
             icon={<HamburgerIcon />}
             aria-label="Toggle menu"
