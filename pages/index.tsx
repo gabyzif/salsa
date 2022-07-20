@@ -17,9 +17,12 @@ import {
 } from "@chakra-ui/react";
 
 import Hero from "~/components/ui/hero/Hero";
+import Nav from "~/components/ui/nav/NavBar";
+
 const Home: NextPage = () => {
   return (
     <Container maxW={"8xl"}>
+      <Nav />
       <Hero />
     </Container>
   );
