@@ -1,6 +1,9 @@
-import { color, extendTheme } from "@chakra-ui/react";
+import { color, extendTheme, theme as baseTheme } from "@chakra-ui/react";
 import styles from "./styles";
-
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 const overrides = {
   styles: {
     global: {
@@ -10,10 +13,10 @@ const overrides = {
       },
     },
   },
-
   fonts: {
     heading: `'Druk Wide', sans-serif`,
     body: `'Articulat CF', 'caca', sans-serif`,
+    a: `'Articulat CF', 'caca', sans-serif`,
   },
   fontSizes: {
     "5xl": "5rem",
@@ -32,6 +35,7 @@ const overrides = {
       },
     },
   },
+  colors: { ...baseTheme.colors, brand: baseTheme.colors.blue },
 };
 
-export default extendTheme(overrides);
+export default extendTheme(overrides, { config });

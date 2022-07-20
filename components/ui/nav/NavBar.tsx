@@ -40,20 +40,22 @@ export const NavBar = () => {
           <Logo />
           <HStack
             spacing="2"
-            borderBottomWidth="1px"
+            borderBottomWidth="3px"
+            borderColor="black"
             p="1.5rem"
             w="100%"
             textTransform="uppercase"
             justify="space-between"
+            color="blue.900"
           >
-            <Button as="a" variant="link" href="#">
+            <Button as="a" variant="link" href="#" color="black">
               Shop
             </Button>
             <ButtonGroup variant="link" spacing="8">
-              <Button as="a" href="#">
+              <Button as="a" href="#" color="black">
                 Qué es Salsa?
               </Button>
-              <Button as="a" href="#">
+              <Button as="a" href="#" color="black">
                 Contacto
               </Button>
             </ButtonGroup>
