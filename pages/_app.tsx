@@ -7,8 +7,9 @@ import {
 } from "@chakra-ui/react";
 import Fonts from "~/theme/fonts";
 import theme from "~/theme/index";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

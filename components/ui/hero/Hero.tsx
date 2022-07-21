@@ -15,7 +15,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <Grid h="100vh" templateColumns="1fr 2fr">
       <GridItem>
