@@ -17,7 +17,7 @@ const Messy = () => (
                   "small . ."
                   ". small1 small2"`}
     // gridTemplateRows={"2fr 2fr 30px"}
-    gridTemplateColumns={"2fr 2fr 3fr"}
+    gridTemplateColumns={`"2fr 2fr 3fr"`}
     gap={6}
   >
     <GridItem w="100%" area={"header"}>
@@ -31,17 +31,41 @@ const Messy = () => (
         dicta praesentium?
       </Text>
     </GridItem>
-    <GridItem w="100%" h="72" bg="blue.500" area={"big"} />
-    <GridItem h="72" bg="blue.500" area={"small"}>
-      {/* <Image
+    <GridItem w="100%" h="72" area={"big"}>
+      <Image
         alt="imagen"
-        w="fit-content"
+        boxSize="auto"
+        objectFit="cover"
         src="./images/diego.png"
         marginLeft="auto"
-      /> */}
+      />
     </GridItem>
-    <GridItem w="100%" h="40" bg="blue.500" area={"small1"} />
-    <GridItem w="100%" h="40" bg="blue.400" area={"small2"} />
+    <GridItem h="72" area={"small"}>
+      <Image
+        alt="imagen"
+        boxSize="auto"
+        objectFit="cover"
+        src="./images/diego.png"
+        marginLeft="auto"
+      />
+    </GridItem>
+    <GridItem w="100%" h="40" area={"small1"} marginTop="-100px">
+      <Image
+        alt="imagen"
+        boxSize="auto"
+        objectFit="cover"
+        src="./images/diego.png"
+        marginLeft="auto"
+      />
+    </GridItem>
+    <GridItem w="100%" h="40" area={"small2"} marginTop="-100px">
+      <Image
+        alt="imagen"
+        objectFit="cover"
+        src="./images/diego.png"
+        marginLeft="auto"
+      />
+    </GridItem>
   </Grid>
 );
 
