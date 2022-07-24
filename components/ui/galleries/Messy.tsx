@@ -1,70 +1,100 @@
-import {
-  Container,
-  Stack,
-  Text,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  useColorModeValue as mode,
-} from "@chakra-ui/react";
+import { Text, Grid, GridItem, Heading, Image, Box } from "@chakra-ui/react";
 
 const Messy = () => (
   <Grid
-    templateAreas={`"header header ."
-                  "subtitle subtitle ."
-                   ". . big"
-                  "small . ."
-                  ". small1 small2"`}
-    // gridTemplateRows={"2fr 2fr 30px"}
-    gridTemplateColumns={`"2fr 2fr 3fr"`}
-    gap={6}
+    gap={4}
+    gridTemplateColumns={`1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr`}
+    gridTemplateAreas={` "line title title title title title title . . . ."
+    ". subtitle subtitle subtitle subtitle subtitle . big big big big"
+    ". small-1 small-1 small-1 . . . big big big big"
+    ". small-1 small-1 small-1 . . . big big big big"
+    ". small-1 small-1 small-1 . . . big big big big"
+    ". small-1 small-1 small-1 small-2 small-2 small-2 small-3 small-3 small-3 ."
+    ". . . . small-2 small-2 small-2 small-3 small-3 small-3 ."
+    ". . . . small-2 small-2 small-2 small-3 small-3 small-3 ."
+    ". . . . small-2 small-2 small-2 small-3 small-3 small-3 ."
+    ". . . . . . . big-2 big-2 big-2 big-2"
+    ". . . . . . . big-2 big-2 big-2 big-2"
+    ". . . . . . . big-2 big-2 big-2 big-2"
+    "footer footer footer footer footer footer footer big-2 big-2 big-2 big-2"
+    "footer footer footer footer footer footer footer . . . ." 
+`}
   >
-    <GridItem w="100%" area={"header"}>
+    <GridItem area="line">
       <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
-        / NEW Sauce
+        /
       </Heading>
     </GridItem>
-    <GridItem w="100%" h="40" area={"subtitle"}>
+    <GridItem area="title">
+      <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
+        NEW Sauce
+      </Heading>
+    </GridItem>
+    <GridItem area="subtitle">
       <Text fontSize="3xl">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
         dicta praesentium?
       </Text>
     </GridItem>
-    <GridItem w="100%" h="72" area={"big"}>
-      <Image
-        alt="imagen"
-        boxSize="auto"
-        objectFit="cover"
-        src="./images/diego.png"
-        marginLeft="auto"
-      />
+    <GridItem area="small-1">
+      <Box backgroundColor="gray.200" padding={6}>
+        <Image
+          alt="imagen"
+          boxSize="auto"
+          objectFit="cover"
+          src="./images/diego.png"
+          marginLeft="auto"
+        />
+      </Box>
     </GridItem>
-    <GridItem h="72" area={"small"}>
-      <Image
-        alt="imagen"
-        boxSize="auto"
-        objectFit="cover"
-        src="./images/diego.png"
-        marginLeft="auto"
-      />
+    <GridItem area="big">
+      <Box backgroundColor="gray.200" padding={6}>
+        <Image
+          alt="imagen"
+          boxSize="auto"
+          objectFit="cover"
+          src="./images/diego.png"
+          marginLeft="auto"
+        />
+      </Box>
     </GridItem>
-    <GridItem w="100%" h="40" area={"small1"} marginTop="-100px">
-      <Image
-        alt="imagen"
-        boxSize="auto"
-        objectFit="cover"
-        src="./images/diego.png"
-        marginLeft="auto"
-      />
+    <GridItem area="small-2">
+      <Box backgroundColor="gray.200" padding={6}>
+        <Image
+          alt="imagen"
+          boxSize="auto"
+          objectFit="cover"
+          src="./images/diego.png"
+          marginLeft="auto"
+        />
+      </Box>
     </GridItem>
-    <GridItem w="100%" h="40" area={"small2"} marginTop="-100px">
-      <Image
-        alt="imagen"
-        objectFit="cover"
-        src="./images/diego.png"
-        marginLeft="auto"
-      />
+    <GridItem area="small-3">
+      <Box backgroundColor="gray.200" padding={6}>
+        <Image
+          alt="imagen"
+          boxSize="auto"
+          objectFit="cover"
+          src="./images/diego.png"
+          marginLeft="auto"
+        />
+      </Box>
+    </GridItem>
+    <GridItem area="big-2">
+      <Box backgroundColor="gray.200" padding={6}>
+        <Image
+          alt="imagen"
+          boxSize="auto"
+          objectFit="cover"
+          src="./images/diego.png"
+          marginLeft="auto"
+        />
+      </Box>
+    </GridItem>
+    <GridItem area="footer">
+      <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
+        NEW Sauce
+      </Heading>
     </GridItem>
   </Grid>
 );
