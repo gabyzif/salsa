@@ -1,4 +1,13 @@
-import { Text, Grid, GridItem, Heading, Image, Box } from "@chakra-ui/react";
+import {
+  Text,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Box,
+  Flex,
+} from "@chakra-ui/react";
+import Arrow from "~/components/svg/Arrow";
 
 const Messy = () => (
   <Grid
@@ -92,9 +101,21 @@ const Messy = () => (
       </Box>
     </GridItem>
     <GridItem area="footer">
-      <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
-        NEW Sauce
-      </Heading>
+      <Flex
+        borderBottomWidth="3px"
+        borderColor="black"
+        padding={4}
+        margin={2}
+        justifyItems="space-between"
+      >
+        <Text fontSize="3xl" fontWeight="bold" lineHeight="1">
+          CHECK OUT ALL THE T-SHIRTS
+        </Text>
+        <Flex>
+          <Arrow color="black" />
+          <Arrow color="black" />
+        </Flex>
+      </Flex>
     </GridItem>
   </Grid>
 );
