@@ -102,7 +102,7 @@ const Messy = () => (
       </Box>
     </GridItem>
     <GridItem area="footer">
-      <Footer />
+      <Footer color="black" />
     </GridItem>
   </Grid>
 );
