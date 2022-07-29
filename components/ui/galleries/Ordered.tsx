@@ -4,7 +4,10 @@ import { ProductCard } from "./cards/product/ProductCard";
 import { products } from "./_data";
 import Footer from "./ui/Footer";
 
-const Ordered = ({ maxW }) => (
+interface orderedProps {
+  maxW: string;
+}
+const Ordered = ({ maxW }: orderedProps) => (
   <Box mx="auto" maxW={maxW}>
     <Flex marginBottom={10}>
       <Heading
