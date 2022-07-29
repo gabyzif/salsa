@@ -18,8 +18,8 @@ import {
 
 import Hero from "~/components/ui/hero/Hero";
 import Nav from "~/components/ui/nav/NavBar";
-import Messy from "~/components/ui/galleries/Messy";
-import Ordered from "~/components/ui/galleries/Ordered";
+import Messy from "~/components/products/galleries/Messy";
+import Ordered from "~/components/products/galleries/Ordered";
 
 const Home: NextPage = () => {
   return (
