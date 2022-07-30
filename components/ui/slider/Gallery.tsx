@@ -47,7 +47,7 @@ const Gallery = (props: GalleryProps) => {
         <Heading
           as="h2"
           size="4xl"
-          color="white"
+          color="black"
           textTransform="uppercase"
           lineHeight={1}
         >
@@ -56,7 +56,7 @@ const Gallery = (props: GalleryProps) => {
         <Heading
           as="h2"
           size="4xl"
-          color="white"
+          color="black"
           textTransform="uppercase"
           lineHeight={1}
         >
