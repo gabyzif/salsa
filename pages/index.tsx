@@ -20,6 +20,8 @@ import Hero from "~/components/ui/hero/Hero";
 import Nav from "~/components/ui/nav/NavBar";
 import Messy from "~/components/products/galleries/Messy";
 import Ordered from "~/components/products/galleries/Ordered";
+import Gallery from "~/components/ui/slider/Gallery";
+import { images } from "~/components/ui/slider/_data";
 
 const Home: NextPage = () => {
   return (
@@ -32,6 +34,7 @@ const Home: NextPage = () => {
       <Box backgroundColor="black" paddingY={10} justifyContent="space-between">
         <Ordered maxW={"8xl"} />
       </Box>
+      <Gallery images={images} />
     </>
   );
 };
