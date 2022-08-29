@@ -83,7 +83,10 @@ const Hero = () => {
             fontSize="5xl"
             as="p"
             fontWeight={900}
-            css={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+            css={{
+              writingMode: "vertical-rl",
+              textOrientation: "mixed",
+            }}
           >
             #10
           </Text>

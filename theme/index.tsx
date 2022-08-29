@@ -13,9 +13,9 @@ const overrides = {
     },
   },
   fonts: {
-    heading: `'Druk Wide', sans-serif`,
-    body: `'Articulat CF', 'caca', sans-serif`,
-    a: `'Articulat CF', 'caca', sans-serif`,
+    heading: `'Druk Wide', 'Druk Medium', sans-serif`,
+    body: `'Articulat CF', sans-serif`,
+    a: `'Articulat CF', sans-serif`,
   },
   fontSizes: {
     "5xl": "5rem",
@@ -25,6 +25,9 @@ const overrides = {
   components: {
     Heading: {
       sizes: {
+        "4xl": {
+          fontWeight: 500,
+        },
         "5xl": {
           fontSize: "5.5rem",
         },

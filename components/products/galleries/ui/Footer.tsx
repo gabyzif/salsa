@@ -8,29 +8,37 @@ import {
   Image,
   Box,
   Flex,
+  HStack,
 } from "@chakra-ui/react";
 import Arrow from "~/components/svg/Arrow";
 
-interface Color {
+interface Footer {
   color: string;
+  text?: string;
 }
 
-const Footer = ({ color }: Color) => {
+const Footer = ({ color, text }: Footer) => {
   return (
     <Flex
-      borderBottomWidth="3px"
+      borderBottomWidth="2px"
       borderColor={color || "black"}
       padding={4}
       margin={2}
-      justifyItems="space-between"
+      justifyContent="space-between"
     >
-      <Text fontSize="3xl" fontWeight="bold" lineHeight="1" color={color}>
-        CHECK OUT ALL THE T-SHIRTS
+      <Text
+        fontSize="2xl"
+        fontWeight="semibold"
+        textTransform="uppercase"
+        lineHeight="1"
+        color={color}
+      >
+        {text || "CHECK OUT ALL THE T-SHIRTS"}
       </Text>
-      <Flex>
+      <HStack spacing={4}>
         <Arrow color={color || "black"} />
         <Arrow color={color || "black"} />
-      </Flex>
+      </HStack>
     </Flex>
   );
 };

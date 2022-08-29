@@ -11,15 +11,21 @@ const Fonts = () => (
         font-display: swap;
         src: url('../fonts/druk-wide-heavy.otf') format('otf');
       }
+      @font-face {
+        font-family: 'Druk Medium';
+        font-style: medium;
+        font-weight: 700;
+        font-display: swap;
+        src: url('../fonts/druk-wide-medium.otf') format('otf');
+      }
       /* latin */
       @font-face {
         font-family: 'Articulat CF';
         src: url('../fonts/ArticulatCF-Normal.ttf') format('ttf'), 
     }
     @font-face {
-        font-family: 'Articulat CF';
+        font-family: 'Articulat CF Heavy';
         src: url('../fonts/ArticulatCF-Heavy.ttf') format('ttf'), 
-        font-weight: 900;
     }
       `}
   />

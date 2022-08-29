@@ -15,14 +15,13 @@ import { Logo } from "./Logo";
 const HamburgerIcon = (props: React.SVGAttributes<SVGSVGElement>) => (
   <svg
     viewBox="0 0 80 62"
-    width="1em"
-    height="1em"
+    width="2em"
+    height="2em"
     fill="currentColor"
     {...props}
   >
     <path d="M80 0H0V6H80V0Z"></path>
     <path d="M80 28H0V34H80V28Z"></path>
-    <path d="M80 56H0V62H80V56Z"></path>
   </svg>
 );
 
@@ -36,29 +35,33 @@ export const NavBar = () => {
   return (
     <Box as="header" pb="20">
       <Box bg="bg-surface">
-        <Flex align="center" justifyItems="center" height="6rem">
-          <Logo />
+        <Flex align="center" justifyItems="center" height="10rem">
+          <div style={{ margin: 20 }}>
+            <Logo />
+          </div>
           <HStack
-            spacing="2"
-            borderBottomWidth="3px"
+            borderBottomWidth="2px"
             borderColor="black"
-            p="1.5rem"
+            pt="1.5rem"
             w="100%"
+            height={"6rem"}
             textTransform="uppercase"
-            justify="space-between"
+            justify="center"
             color="blue.900"
           >
-            <Button as="a" variant="link" href="#" color="black">
-              Shop
-            </Button>
-            <ButtonGroup variant="link" spacing="8">
-              <Button as="a" href="#" color="black">
-                Qué es Salsa?
+            <HStack width="80%" justify="space-between">
+              <Button as="a" variant="link" href="#" color="black">
+                Shop
               </Button>
-              <Button as="a" href="#" color="black">
-                Contacto
-              </Button>
-            </ButtonGroup>
+              <ButtonGroup variant="link" spacing={20}>
+                <Button as="a" href="#" color="black">
+                  Qué es Salsa?
+                </Button>
+                <Button as="a" href="#" color="black">
+                  Contacto
+                </Button>
+              </ButtonGroup>
+            </HStack>
           </HStack>
           <IconButton
             size="lg"
@@ -69,7 +72,7 @@ export const NavBar = () => {
           />
         </Flex>
       </Box>
-
+      {/* 
       <Flex
         ref={ref}
         justify="center"
@@ -103,7 +106,7 @@ export const NavBar = () => {
           <NavItem>Blog</NavItem>
           <NavItem>Careers</NavItem>
         </HStack>
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };

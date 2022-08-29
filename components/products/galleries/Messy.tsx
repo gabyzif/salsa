@@ -12,6 +12,7 @@ import Footer from "./ui/Footer";
 
 const Messy = () => (
   <Grid
+    paddingBottom={20}
     gap={4}
     gridTemplateColumns={`1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr`}
     gridTemplateAreas={` "line title title title title title title . . . ."
@@ -31,17 +32,17 @@ const Messy = () => (
 `}
   >
     <GridItem area="line">
-      <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
+      <Heading as="h2" size="3xl" textTransform="uppercase" lineHeight={1}>
         /
       </Heading>
     </GridItem>
     <GridItem area="title">
-      <Heading as="h2" size="4xl" textTransform="uppercase" lineHeight={1}>
+      <Heading as="h2" size="3xl" textTransform="uppercase" lineHeight={1}>
         NEW Sauce
       </Heading>
     </GridItem>
     <GridItem area="subtitle">
-      <Text fontSize="3xl">
+      <Text fontSize="2xl">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
         dicta praesentium?
       </Text>

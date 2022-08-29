@@ -8,6 +8,7 @@ import {
   Tag,
   Text,
   useColorModeValue,
+  Button,
 } from "@chakra-ui/react";
 import { PriceTag } from "./PriceTags";
 import * as React from "react";

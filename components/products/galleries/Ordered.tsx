@@ -1,4 +1,12 @@
-import { Box, SimpleGrid, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  SimpleGrid,
+  Flex,
+  Heading,
+  Text,
+  HStack,
+  VStack,
+} from "@chakra-ui/react";
 import * as React from "react";
 import { ProductCard } from "./cards/product/ProductCard";
 import { products } from "./_data";
@@ -8,35 +16,45 @@ interface orderedProps {
   maxW: string;
 }
 const Ordered = ({ maxW }: orderedProps) => (
-  <Box mx="auto" maxW={maxW}>
-    <Flex marginBottom={10}>
-      <Heading
-        as="h2"
-        size="4xl"
-        color="white"
-        textTransform="uppercase"
-        lineHeight={1}
-      >
-        /
-      </Heading>
-      <Heading
-        as="h2"
-        size="4xl"
-        color="white"
-        textTransform="uppercase"
-        lineHeight={1}
-      >
-        NUESTRAS SALSAS
-      </Heading>
-    </Flex>
-    <Box width="50%" marginY={5}>
-      <Text fontSize="xl" color="white">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-        dicta praesentium?
-      </Text>
+  <VStack
+    mx="auto"
+    maxW={maxW}
+    paddingY={20}
+    spacing={20}
+    direction="column"
+    alignItems="flex-start"
+  >
+    <Box>
+      <HStack marginBottom={10} spacing={20}>
+        <Heading
+          as="h2"
+          size="3xl"
+          color="white"
+          textTransform="uppercase"
+          lineHeight={1}
+        >
+          /
+        </Heading>
+        <Heading
+          as="h2"
+          size="3xl"
+          color="white"
+          textTransform="uppercase"
+          lineHeight={1}
+        >
+          NUESTRAS SALSAS
+        </Heading>
+      </HStack>
+      <Box width="40%" marginLeft={10}>
+        <Text fontSize="xl" color="white">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dicta praesentium?
+        </Text>
+      </Box>
     </Box>
 
     <SimpleGrid
+      width={"100%"}
       columns={{ base: 1, sm: 2, md: 3 }}
       gap={{ base: "8", lg: "20" }}
     >
@@ -44,11 +62,10 @@ const Ordered = ({ maxW }: orderedProps) => (
         <ProductCard key={product.id} product={product} />
       ))}
     </SimpleGrid>
-
-    <Flex>
-      <Footer color="white" />
-    </Flex>
-  </Box>
+    <Box width="100%">
+      <Footer color="white" text="Más salsas" />
+    </Box>
+  </VStack>
 );
 
 export default Ordered;
